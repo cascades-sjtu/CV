@@ -93,9 +93,9 @@
 
 #let cpp = {
   [C];box(move(
-    dx: -3.5pt, dy:-0.5pt,
+    dx: -2.5pt, dy:-0.5pt,
     box(scale(50%)[#strong[++]])
-  ));h(-8pt)
+  ));h(-6pt)
 }
 
 #let ccpp = {
