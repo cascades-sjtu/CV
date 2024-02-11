@@ -6,8 +6,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: typst-community/setup-typst@v3
-        with:
-          cache-dependency-path: template.typ
       - run: typst compile CV.typ --font-path fonts CV.pdf
       - uses: actions/upload-artifact@v4
         with:
