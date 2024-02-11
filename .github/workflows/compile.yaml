@@ -7,7 +7,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: typst-community/setup-typst@v3
       - run: typst compile CV.typ --font-path fonts CV.pdf
-      - uses: actions/upload-artifact@v4
+      - run: echo "DATE=$(date +%Y-%m-%d)" >> $GITHUB_ENV
+      - uses: softprops/action-gh-release@v1
         with:
-          name: CV
-          path: CV.pdf
+          name: ${{ env.DATE }}
+          files: CV.pdf
+          tag_name: latest
