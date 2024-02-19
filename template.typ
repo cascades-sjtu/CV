@@ -11,7 +11,7 @@
   set strong(delta: 250)
   set list(indent: 0pt)
 
-  show link: url => underline(text(color.navy, url))
+  show link: url => underline(url)
   
   show heading.where(level: 1): title => align(center, text(
       size: 24pt, 
